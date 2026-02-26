@@ -512,10 +512,17 @@ document.getElementById('scroll-top-btn').addEventListener('click', () => {
 
 const form = document.getElementById("contact-form");
 const successMsg = document.getElementById("form-success");
+const submitBtn = document.getElementById("submit-btn");
 
 if (form) {
   form.onsubmit = async (e) => {
     e.preventDefault();
+    
+    // Status Loading pada tombol
+    const originalContent = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Mengirim...";
+    
     const data = new FormData(form);
     
     try {
@@ -529,10 +536,14 @@ if (form) {
         successMsg.style.display = "block"; 
         form.reset(); 
       } else {
-        alert("Gagal mengirim, coba lagi nanti.");
+        alert("Gagal mengirim, pastikan Formspree kamu sudah ACTIVE.");
       }
     } catch (error) {
       alert("Terjadi kesalahan koneksi.");
+    } finally {
+      // Kembalikan tombol ke semula
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalContent;
     }
   };
 }
