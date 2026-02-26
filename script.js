@@ -510,31 +510,42 @@ document.getElementById('scroll-top-btn').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+// Inisialisasi EmailJS dengan Public Key kamu
+(function() {
+    emailjs.init("7QHWnzVlJmyxKqhes");
+})();
+
 const form = document.getElementById("contact-form");
+const successMsg = document.getElementById("form-success");
+const submitBtn = document.getElementById("submit-btn");
 
-form.onsubmit = async (e) => {
-  e.preventDefault();
-  
-  // Ambil tombol untuk animasi loading singkat
-  const btn = document.querySelector(".btn-primary");
-  const originalText = btn.innerText;
-  btn.innerText = "Mengirim...";
-  btn.disabled = true;
-
-  // Sesuaikan ID dengan Dashboard EmailJS kamu
-  const serviceID = "service_z8sn3uw"; //
-  const templateID = "TEMPLATE_ID_KAMU"; 
-  const publicKey = "PUBLIC_KEY_KAMU"; 
-
-  try {
-    await emailjs.sendForm(serviceID, templateID, form, publicKey);
+if (form) {
+  form.onsubmit = async (e) => {
+    e.preventDefault();
     
-    document.getElementById("form-success").style.display = "block";
-    form.reset();
-  } catch (error) {
-    alert("Waduh, gagal kirim: " + JSON.stringify(error));
-  } finally {
-    btn.innerText = originalText;
-    btn.disabled = false;
-  }
-};
+    // Animasi loading pada tombol
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerText = "Mengirim...";
+    submitBtn.disabled = true;
+
+    // Ganti TEMPLATE_ID_KAMU dengan ID dari dashboard EmailJS (menu Email Templates)
+    const serviceID = "service_z8sn3uw"; 
+    const templateID = "TEMPLATE_ID_KAMU"; 
+
+    try {
+      const response = await emailjs.sendForm(serviceID, templateID, form);
+      
+      if (response.status === 200) {
+        successMsg.style.display = "block"; // Munculkan notifikasi hijau
+        form.reset(); // Bersihkan isi form
+      }
+    } catch (error) {
+      alert("Gagal mengirim pesan. Cek koneksi atau settingan EmailJS kamu.");
+      console.error("EmailJS Error:", error);
+    } finally {
+      // Kembalikan tombol ke kondisi awal
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  };
+}
