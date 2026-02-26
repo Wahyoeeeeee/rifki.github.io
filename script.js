@@ -510,42 +510,29 @@ document.getElementById('scroll-top-btn').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Inisialisasi EmailJS dengan Public Key kamu
-(function() {
-    emailjs.init("7QHWnzVlJmyxKqhes");
-})();
-
 const form = document.getElementById("contact-form");
 const successMsg = document.getElementById("form-success");
-const submitBtn = document.getElementById("submit-btn");
 
 if (form) {
   form.onsubmit = async (e) => {
     e.preventDefault();
+    const data = new FormData(form);
     
-    // Animasi loading pada tombol
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerText = "Mengirim...";
-    submitBtn.disabled = true;
-
-    // Ganti TEMPLATE_ID_KAMU dengan ID dari dashboard EmailJS (menu Email Templates)
-    const serviceID = "service_z8sn3uw"; 
-    const templateID = "TEMPLATE_ID_KAMU"; 
-
     try {
-      const response = await emailjs.sendForm(serviceID, templateID, form);
-      
-      if (response.status === 200) {
-        successMsg.style.display = "block"; // Munculkan notifikasi hijau
-        form.reset(); // Bersihkan isi form
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg.style.display = "block"; 
+        form.reset(); 
+      } else {
+        alert("Gagal mengirim, coba lagi nanti.");
       }
     } catch (error) {
-      alert("Gagal mengirim pesan. Cek koneksi atau settingan EmailJS kamu.");
-      console.error("EmailJS Error:", error);
-    } finally {
-      // Kembalikan tombol ke kondisi awal
-      submitBtn.innerHTML = originalText;
-      submitBtn.disabled = false;
+      alert("Terjadi kesalahan koneksi.");
     }
   };
 }

@@ -698,10 +698,10 @@
       </div>
 
       <div class="contact-right fade-in">
-        <form id="contact-form">
+        <form action="https://formspree.io/f/xbdaweoq" method="POST" id="contact-form">
           <div class="form-group">
             <label class="form-label" id="label-name">Nama Lengkap</label>
-            <input type="text" name="name" class="form-input" placeholder="Nama Anda" required />
+            <input type="text" name="Nama Pengirim" class="form-input" placeholder="Nama Anda" required />
           </div>
           <div class="form-group">
             <label class="form-label" id="label-email">Email</label>
@@ -709,11 +709,11 @@
           </div>
           <div class="form-group">
             <label class="form-label" id="label-subject">Subjek</label>
-            <input type="text" name="subject" class="form-input" placeholder="Tawaran Pekerjaan / Kolaborasi" required />
+            <input type="text" name="Tujuan Pesan" class="form-input" placeholder="Tawaran Pekerjaan / Kolaborasi" required />
           </div>
           <div class="form-group" style="margin-bottom:24px">
             <label class="form-label" id="label-message">Pesan</label>
-            <textarea name="message" class="form-input" rows="5" placeholder="Tuliskan pesan Anda..." required style="resize:none"></textarea>
+            <textarea name="Isi Pesan Utama" class="form-input" rows="5" placeholder="Tuliskan pesan Anda..." required style="resize:none"></textarea>
           </div>
           <button type="submit" class="btn-primary" style="width:100%;justify-content:center" id="submit-btn">
             Kirim Pesan
@@ -723,9 +723,6 @@
             </svg>
           </button>
         </form>
-        <div id="form-success" style="display:none; margin-top:20px; color:#155724; background-color:#d4edda; padding:10px; border-radius:5px; text-align:center;">
-          ✓ Pesan berhasil dikirim! Saya akan segera menghubungi kamu.
-        </div>
       </div>
 
     </div>
