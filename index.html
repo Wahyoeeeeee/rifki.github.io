@@ -5,41 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rifki Wahyu Hartadi – CV & Portfolio</title>
 
-  <!-- Favicon (bisa diganti) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>" />
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- GSAP Animation Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
-<!-- ===== SCROLL PROGRESS ===== -->
 <div id="scroll-progress"></div>
 
-<!-- ===== LOADING SCREEN ===== -->
 <div id="loading-screen">
   <div style="text-align:center">
-    <div class="loading-logo"><span>AS</span></div>
-    <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:8px">Rifki Wahyu Hartadi</h1>
-    <p style="color:var(--muted-foreground);font-size:0.9rem">Memuat portfolio...</p>
+    <div class="loading-logo"><span>RWH</span></div> 
+    <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:8px">Rifki Wahyu Hartadi</h1> 
+    <p style="color:var(--muted-foreground);font-size:0.9rem">Memuat portfolio...</p> 
     <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
   </div>
 </div>
 
-<!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <div class="nav-inner">
-
-    <!-- Logo -->
     <button class="nav-logo" onclick="scrollToSection('home')">
-      <div class="nav-logo-box"><span>AS</span></div>
+      <div class="nav-logo-box"><span>RWH</span></div> 
     </button>
-
-    <!-- Desktop Nav -->
     <div id="desktop-nav">
       <button class="nav-link active" onclick="scrollToSection('home')" id="nav-home">Beranda</button>
       <button class="nav-link" onclick="scrollToSection('about')" id="nav-about">Tentang Saya</button>
@@ -48,8 +37,6 @@
       <button class="nav-link" onclick="scrollToSection('certificates')" id="nav-certificates">Sertifikat</button>
       <button class="nav-link" onclick="scrollToSection('contact')" id="nav-contact">Kontak</button>
     </div>
-
-    <!-- Controls -->
     <div class="nav-controls">
       <button class="btn-outline" id="lang-btn" onclick="toggleLanguage()">ID</button>
       <button class="btn-outline" id="theme-btn" onclick="toggleTheme()" style="padding:6px 10px">
@@ -67,11 +54,9 @@
         </svg>
       </button>
     </div>
-
   </div>
 </nav>
 
-<!-- ===== MOBILE DRAWER ===== -->
 <div id="mobile-drawer">
   <nav class="drawer-nav">
     <button class="nav-link" onclick="scrollToSection('home');toggleDrawer()">Beranda</button>
@@ -92,20 +77,19 @@
 </div>
 <div id="overlay" onclick="toggleDrawer()"></div>
 
-<!-- ===== HERO SECTION ===== -->
-<section id="home">
+<section id="home"> 
   <div class="hero-bg"></div>
   <div class="container">
     <div class="hero-grid" id="hero-grid">
-
-      <!-- Left Content -->
       <div class="hero-left">
+
         <p class="hero-greeting fade-in" data-delay="0" id="hero-greeting">Halo, Saya</p>
         <h1 class="hero-name fade-in" data-delay="0.1">Rifki Wahyu Hartadi</h1>
-        <p class="hero-tagline fade-in" data-delay="0.2" id="hero-tagline">Mahasiswa Aktif · Content Creator · Desainer Muda</p>
+        <p class="hero-tagline fade-in" data-delay="0.2" id="hero-tagline">Operator Produksi · S1 Sistem Informasi</p>
         <p class="hero-desc fade-in" data-delay="0.3" id="hero-desc">
-          Mahasiswa yang passionate di bidang desain dan konten digital. Siap berkolaborasi untuk menciptakan karya yang berdampak.
+          Lulusan SMK Teknik Pemesinan dengan pengalaman di industri manufaktur komponen elektronik dan otomotif. Terbiasa bekerja dengan target produksi ketat dan mencapai Zero Reject.
         </p>
+
         <div class="hero-cta fade-in" data-delay="0.4">
           <button class="btn-primary" onclick="scrollToSection('portfolio')" id="hero-cta1">
             Lihat Portofolio
@@ -120,15 +104,10 @@
             Unduh CV
           </a>
         </div>
+
         <div class="hero-socials fade-in" data-delay="0.5">
-          <a href="#" class="social-btn" title="LinkedIn">
+          <a href="https://linkedin.com/in/rifkiwahyuhartadi" target="_blank" class="social-btn" title="LinkedIn">
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="#" class="social-btn" title="GitHub">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          <a href="#" class="social-btn" title="Instagram">
-            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           </a>
           <a href="mailto:rifkiwahyuhartadi06@gmail.com" class="social-btn" title="Email">
             <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -136,157 +115,128 @@
         </div>
       </div>
 
-      <!-- Right - Profile Photo -->
       <div class="hero-right fade-in" data-delay="0.3">
         <div class="profile-glow"></div>
         <div class="profile-wrap">
           <div class="profile-ring">
-            <!-- Ganti URL foto dengan foto kamu sendiri -->
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" alt="Rifki Wahyu Hartadi" />
           </div>
           <div class="open-badge">
             <div class="pulse-dot"></div>
-            <span id="hero-badge">Open to Work</span>
+            <span id="hero-badge">Tersedia Full-time</span> 
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
-  <!-- Scroll Indicator -->
   <div class="scroll-indicator">
     <div class="scroll-mouse"><div class="scroll-dot"></div></div>
   </div>
 </section>
 
-<!-- ===== ABOUT SECTION ===== -->
-<section id="about">
+<section id="about"> 
   <div class="container">
-
     <div class="section-title fade-in">
-      <h2 id="about-title">Tentang Saya</h2>
+      <h2 id="about-title">Tentang Saya</h2> 
       <div class="title-line"></div>
     </div>
-
     <div class="about-grid" id="about-grid">
 
-      <!-- Left - Photo -->
       <div class="about-img-wrap fade-in">
-        <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&h=750&fit=crop" alt="About" />
+        <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&h=750&fit=crop" alt="About Rifki" />
       </div>
 
-      <!-- Right - Info -->
       <div class="about-right">
-
         <p class="about-bio fade-in" id="about-bio">
-          Saya adalah mahasiswa aktif yang passionate di bidang desain grafis, konten digital, dan komunikasi visual.
-          Dengan pengalaman di berbagai organisasi dan proyek freelance, saya terus mengembangkan kemampuan untuk
-          menciptakan karya yang berkesan dan berdampak.
+          Mahir mengoperasikan mesin produksi, alat ukur presisi (Caliper, Mikrometer), membaca gambar teknik, serta menerapkan standar 5R dan K3. Saat ini menyeimbangkan pengalaman industri manufaktur saya dengan menempuh studi sarjana.
         </p>
 
-        <!-- Personal Info -->
         <div class="info-list fade-in">
           <div class="info-row">
-            <div class="info-icon">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
+            <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div>
-              <p class="info-label" id="about-univ-label">Universitas</p>
-              <p class="info-value" id="about-univ-val">Universitas Indonesia</p>
+              <p class="info-label" id="about-univ-label">Universitas</p> 
+              <p class="info-value" id="about-univ-val">Bina Sarana Informatika</p> 
             </div>
           </div>
           <div class="info-row">
-            <div class="info-icon">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
+            <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div>
-              <p class="info-label" id="about-major-label">Jurusan</p>
-              <p class="info-value" id="about-major-val">Ilmu Komunikasi</p>
+              <p class="info-label" id="about-major-label">Pendidikan</p> 
+              <p class="info-value" id="about-major-val">SMK Teknik Pemesinan | S1 Sistem Informasi</p> 
             </div>
           </div>
           <div class="info-row">
-            <div class="info-icon">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
+            <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
             <div>
-              <p class="info-label" id="about-sem-label">Semester</p>
-              <p class="info-value" id="about-sem-val">Semester 6 · Angkatan 2022</p>
+              <p class="info-label" id="about-sem-label">Nilai Akademik</p> 
+              <p class="info-value" id="about-sem-val">SMK: 83.00/100 | S1: IPK 3.23 (Berjalan)</p> 
             </div>
           </div>
           <div class="info-row">
-            <div class="info-icon">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
+            <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
-              <p class="info-label" id="about-loc-label">Lokasi</p>
-              <p class="info-value" id="about-loc-val">Jakarta, Indonesia</p>
+              <p class="info-label" id="about-loc-label">Lokasi</p> 
+              <p class="info-value" id="about-loc-val">Tambun Selatan, Bekasi</p> 
             </div>
           </div>
           <div class="info-row">
-            <div class="info-icon" style="color:#22c55e">
-              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
+            <div class="info-icon" style="color:#22c55e"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
             <div>
-              <p class="info-label" id="about-status-label">Status</p>
-              <p class="info-value" style="color:#22c55e" id="about-status-val">Aktif Kuliah</p>
+              <p class="info-label" id="about-status-label">Status</p> 
+              <p class="info-value" style="color:#22c55e" id="about-status-val">Siap Bekerja Segera</p> 
             </div>
           </div>
         </div>
 
-        <!-- Soft Skills -->
         <div class="skills-section fade-in">
-          <h3 id="about-softskills-title">Soft Skills</h3>
+          <h3 id="about-softskills-title">Soft Skills</h3> 
           <div class="soft-skills-wrap">
-            <span class="skill-tag">Komunikasi</span>
-            <span class="skill-tag">Teamwork</span>
-            <span class="skill-tag">Kreatif</span>
-            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Detail Oriented</span>
+            <span class="skill-tag">Disiplin</span>
             <span class="skill-tag">Adaptif</span>
-            <span class="skill-tag">Leadership</span>
-            <span class="skill-tag">Time Management</span>
-            <span class="skill-tag">Critical Thinking</span>
+            <span class="skill-tag">Manajemen Waktu</span>
+            <span class="skill-tag">Kerja Tim</span>
           </div>
         </div>
 
-        <!-- Hard Skills -->
         <div class="skills-section fade-in">
-          <h3 id="about-hardskills-title">Hard Skills</h3>
+          <h3 id="about-hardskills-title">Keahlian Teknis</h3> 
           <div class="hard-skills-list">
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Microsoft Office</span>
+                <span class="skill-name">Standar 5R, K3 & Zero Reject</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="95"></div></div>
+            </div>
+            <div>
+              <div class="skill-item-header">
+                <span class="skill-name">Alat Ukur Presisi (Caliper, Mikrometer)</span>
                 <span class="skill-pct">90%</span>
               </div>
               <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="90"></div></div>
             </div>
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Canva</span>
+                <span class="skill-name">Mesin Bubut & Frais (Milling)</span>
                 <span class="skill-pct">85%</span>
               </div>
               <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="85"></div></div>
             </div>
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Adobe Photoshop</span>
-                <span class="skill-pct">75%</span>
+                <span class="skill-name">AutoCAD 2D/3D & Gambar Teknik (ISO)</span>
+                <span class="skill-pct">85%</span>
               </div>
-              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="75"></div></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="85"></div></div>
             </div>
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Public Speaking</span>
-                <span class="skill-pct">80%</span>
+                <span class="skill-name">Manajemen Inventaris & FIFO</span>
+                <span class="skill-pct">90%</span>
               </div>
-              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="80"></div></div>
-            </div>
-            <div>
-              <div class="skill-item-header">
-                <span class="skill-name">Video Editing</span>
-                <span class="skill-pct">70%</span>
-              </div>
-              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="70"></div></div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="90"></div></div>
             </div>
           </div>
         </div>
@@ -296,145 +246,138 @@
   </div>
 </section>
 
-<!-- ===== EXPERIENCE SECTION ===== -->
-<section id="experience">
+<section id="experience"> 
   <div class="container">
-
     <div class="section-title fade-in">
-      <h2 id="exp-title">Pengalaman</h2>
+      <h2 id="exp-title">Pengalaman Kerja</h2> 
       <div class="title-line"></div>
     </div>
-
     <div class="timeline-wrap">
       <div class="timeline-line"></div>
       <div class="timeline-list">
 
-        <!-- Exp 1 - Left -->
         <div class="timeline-item fade-in">
           <div class="timeline-dot"></div>
-          <div class="timeline-card-wrap">
+          <div class="timeline-card-wrap"> 
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Content Creator Intern</h3>
-                  <p class="exp-org">Digital Creative Studio</p>
+                  <h3 class="exp-role">Operator Packing</h3> 
+                  <p class="exp-org">PT Denko Wahana Industri</p> 
                 </div>
-                <span class="badge">Magang</span>
+                <span class="badge">Full-time</span> 
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Jan 2024 - Sekarang
+                  Okt 2022 – Des 2022 
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Remote
+                  Cikarang, Bekasi 
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Membuat konten visual untuk media sosial dengan engagement rate 25%</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengelola jadwal posting dan strategi konten untuk 3 brand</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Berkolaborasi dengan tim desain untuk kampanye marketing</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mencapai dan melampaui target pengemasan harian dengan akurasi 100%.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Melakukan inspeksi visual ketat setiap komponen (Zero Reject).</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menjalankan instruksi kerja 5R dan K3 dengan zero accident.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div>
+          <div class="timeline-spacer"></div> 
         </div>
 
-        <!-- Exp 2 - Right -->
         <div class="timeline-item right fade-in">
           <div class="timeline-dot"></div>
           <div class="timeline-card-wrap">
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Ketua Divisi Media</h3>
-                  <p class="exp-org">Himpunan Mahasiswa</p>
+                  <h3 class="exp-role">Junior Maintenance</h3> 
+                  <p class="exp-org">PT Trimitra Chitrahasta</p> 
                 </div>
-                <span class="badge">Organisasi</span>
+                <span class="badge">PKL</span> 
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Agu 2023 - Jul 2024
+                  Jan 2019 – Apr 2019 
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Jakarta, Indonesia
+                  Cikarang, Bekasi 
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Memimpin tim 15 anggota dalam produksi konten organisasi</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Meningkatkan followers Instagram 200% dalam 6 bulan</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengkoordinasi 10+ event dengan dokumentasi profesional</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Melakukan perbaikan dan inspeksi spare part mesin produksi sesuai gambar teknik.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Memelihara alat ukur presisi secara rutin untuk menjaga akurasi.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Berkontribusi pada efisiensi biaya perawatan dan budaya 5R.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div>
+          <div class="timeline-spacer"></div> 
         </div>
 
-        <!-- Exp 3 - Left -->
         <div class="timeline-item fade-in">
           <div class="timeline-dot"></div>
           <div class="timeline-card-wrap">
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Graphic Designer</h3>
-                  <p class="exp-org">Freelance</p>
+                  <h3 class="exp-role">Operator Produksi Kuliner</h3> 
+                  <p class="exp-org">D’Fresto Franchise</p> 
                 </div>
-                <span class="badge">Part-time</span>
+                <span class="badge">Operasional</span> 
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Mar 2023 - Des 2023
+                  Jan 2026 – Sekarang 
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Remote
+                  Tambun Selatan, Bekasi 
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menyelesaikan 30+ proyek desain untuk berbagai klien</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Membuat brand identity, social media kit, dan marketing materials</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mempertahankan rating 4.9/5 di platform freelance</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengelola rantai produksi harian dari persiapan bahan hingga penyajian.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menerapkan standar kebersihan 5R secara ketat.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengendalikan manajemen inventaris zero waste untuk efisiensi operasional.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div>
+          <div class="timeline-spacer"></div> 
         </div>
 
-        <!-- Exp 4 - Right -->
         <div class="timeline-item right fade-in">
           <div class="timeline-dot"></div>
           <div class="timeline-card-wrap">
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Volunteer Teacher</h3>
-                  <p class="exp-org">Program Mengajar Digital</p>
+                  <h3 class="exp-role">Pengelola Operasional & Inventaris</h3> 
+                  <p class="exp-org">Rikita Mart</p> 
                 </div>
-                <span class="badge">Volunteer</span>
+                <span class="badge">Operasional</span> 
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Jun 2023 - Agu 2023
+                  2020 – Sekarang 
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Bandung, Indonesia
+                  Tambun Selatan, Bekasi 
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengajar 40+ siswa dasar-dasar desain grafis dan digital marketing</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengembangkan modul pembelajaran interaktif</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Berkolaborasi dengan NGO lokal untuk program pemberdayaan</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menjaga akurasi stok 100% dengan menggunakan sistem FIFO.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Memastikan ketersediaan barang tanpa pemborosan (zero waste).</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Meningkatkan margin keuntungan melalui pemilihan supplier yang kompetitif.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div>
+          <div class="timeline-spacer"></div> 
         </div>
 
       </div>
@@ -442,167 +385,101 @@
   </div>
 </section>
 
-<!-- ===== PORTFOLIO SECTION ===== -->
-<section id="portfolio">
+<section id="portfolio"> 
   <div class="container">
-
     <div class="section-title fade-in">
-      <h2 id="port-title">Portofolio</h2>
+      <h2 id="port-title">Portofolio Kompetensi</h2> 
       <div class="title-line"></div>
     </div>
 
-    <!-- Filter Buttons -->
     <div class="filter-wrap fade-in">
-      <button class="filter-btn active" onclick="filterPortfolio('all')" data-filter="all" id="filter-all">Semua</button>
-      <button class="filter-btn" onclick="filterPortfolio('design')" data-filter="design" id="filter-design">Desain</button>
-      <button class="filter-btn" onclick="filterPortfolio('video')" data-filter="video" id="filter-video">Video</button>
-      <button class="filter-btn" onclick="filterPortfolio('writing')" data-filter="writing" id="filter-writing">Tulisan</button>
-      <button class="filter-btn" onclick="filterPortfolio('tech')" data-filter="tech" id="filter-tech">Teknologi</button>
+      <button class="filter-btn active" onclick="filterPortfolio('all')"     data-filter="all"     id="filter-all">Semua</button>
+      <button class="filter-btn"        onclick="filterPortfolio('design')"  data-filter="design"  id="filter-design">Teknik Mesin</button>
+      <button class="filter-btn"        onclick="filterPortfolio('video')"   data-filter="video"   id="filter-video">AutoCAD</button>
+      <button class="filter-btn"        onclick="filterPortfolio('writing')" data-filter="writing" id="filter-writing">Manajemen Inventaris</button>
+      <button class="filter-btn"        onclick="filterPortfolio('tech')"    data-filter="tech"    id="filter-tech">Sistem Informasi</button>
     </div>
 
-    <!-- Portfolio Grid -->
     <div class="portfolio-grid" id="portfolio-grid">
+      <div class="portfolio-card fade-in" data-category="video"> 
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" alt="AutoCAD 2D/3D" />
+          <div class="portfolio-overlay">
+            <button class="icon-btn" onclick="openModal(0)" title="Lihat Detail"> 
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="badge portfolio-category">AutoCAD</span> 
+          <h3 class="portfolio-title">Implementasi Sketsa ke AutoCAD</h3> 
+          <p class="portfolio-desc">Pembuatan gambar teknik akurat untuk mesin produksi.</p> 
+          <div class="portfolio-tools">
+            <span class="tool-tag">AutoCAD 2D/3D</span> 
+            <span class="tool-tag">Gambar Teknik ISO</span>
+          </div>
+        </div>
+      </div>
 
       <div class="portfolio-card fade-in" data-category="design">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop" alt="Brand Identity" />
+          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&h=400&fit=crop" alt="Alat Ukur Presisi" />
           <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(0)" title="Lihat Detail">
+            <button class="icon-btn" onclick="openModal(1)"> 
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
-            <a href="#" class="icon-btn" title="Kunjungi Link">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
         </div>
         <div class="portfolio-body">
-          <span class="badge portfolio-category">Desain</span>
-          <h3 class="portfolio-title">Brand Identity - Kafe Modern</h3>
-          <p class="portfolio-desc">Desain identitas visual lengkap untuk kafe lokal</p>
+          <span class="badge portfolio-category">Teknik Mesin</span>
+          <h3 class="portfolio-title">Pengukuran Presisi Zero Reject</h3> 
+          <p class="portfolio-desc">Inspeksi visual ketat menggunakan Caliper dan Mikrometer.</p>
           <div class="portfolio-tools">
-            <span class="tool-tag">Adobe Illustrator</span>
-            <span class="tool-tag">Figma</span>
-            <span class="tool-tag">Photoshop</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card fade-in" data-category="video">
-        <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop" alt="Video Campaign" />
-          <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(1)">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </button>
-            <a href="#" class="icon-btn">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="portfolio-body">
-          <span class="badge portfolio-category">Video</span>
-          <h3 class="portfolio-title">Video Campaign - Produk Digital</h3>
-          <p class="portfolio-desc">Video promosi 60 detik untuk peluncuran aplikasi mobile</p>
-          <div class="portfolio-tools">
-            <span class="tool-tag">After Effects</span>
-            <span class="tool-tag">Premiere Pro</span>
-            <span class="tool-tag">Canva</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card fade-in" data-category="tech">
-        <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="UI/UX Design" />
-          <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(2)">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </button>
-            <a href="#" class="icon-btn">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="portfolio-body">
-          <span class="badge portfolio-category">Teknologi</span>
-          <h3 class="portfolio-title">UI/UX Design - E-Commerce App</h3>
-          <p class="portfolio-desc">Desain interface dan user experience untuk platform belanja online</p>
-          <div class="portfolio-tools">
-            <span class="tool-tag">Figma</span>
-            <span class="tool-tag">Adobe XD</span>
-            <span class="tool-tag">Miro</span>
+            <span class="tool-tag">Caliper</span>
+            <span class="tool-tag">Mikrometer</span>
+            <span class="tool-tag">Standar QC</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-card fade-in" data-category="writing">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=400&fit=crop" alt="Artikel" />
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?w=600&h=400&fit=crop" alt="Manajemen Inventaris" />
           <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(3)">
+            <button class="icon-btn" onclick="openModal(2)"> 
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
-            <a href="#" class="icon-btn">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
         </div>
         <div class="portfolio-body">
-          <span class="badge portfolio-category">Tulisan</span>
-          <h3 class="portfolio-title">Artikel - Panduan Digital Marketing</h3>
-          <p class="portfolio-desc">Series artikel tentang strategi marketing di era digital</p>
+          <span class="badge portfolio-category">Manajemen Inventaris</span>
+          <h3 class="portfolio-title">Optimalisasi Stok FIFO</h3>
+          <p class="portfolio-desc">Penerapan manajemen barang masuk keluar secara efisien.</p>
           <div class="portfolio-tools">
-            <span class="tool-tag">Medium</span>
-            <span class="tool-tag">Notion</span>
-            <span class="tool-tag">Grammarly</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card fade-in" data-category="design">
-        <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Social Media Kit" />
-          <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(4)">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </button>
-            <a href="#" class="icon-btn">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="portfolio-body">
-          <span class="badge portfolio-category">Desain</span>
-          <h3 class="portfolio-title">Social Media Kit - Startup Tech</h3>
-          <p class="portfolio-desc">Template konten media sosial untuk startup teknologi</p>
-          <div class="portfolio-tools">
-            <span class="tool-tag">Canva</span>
-            <span class="tool-tag">Figma</span>
-            <span class="tool-tag">Photoshop</span>
+            <span class="tool-tag">Sistem FIFO</span>
+            <span class="tool-tag">Ms. Excel</span>
+            <span class="tool-tag">Zero Waste</span>
           </div>
         </div>
       </div>
 
       <div class="portfolio-card fade-in" data-category="tech">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Landing Page" />
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Sistem Informasi" />
           <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(5)">
+            <button class="icon-btn" onclick="openModal(3)"> 
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
-            <a href="#" class="icon-btn">
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
           </div>
         </div>
         <div class="portfolio-body">
-          <span class="badge portfolio-category">Teknologi</span>
-          <h3 class="portfolio-title">Landing Page - SaaS Product</h3>
-          <p class="portfolio-desc">Website landing page responsif untuk produk SaaS</p>
+          <span class="badge portfolio-category">Sistem Informasi</span>
+          <h3 class="portfolio-title">Proyek Pengembangan Aplikasi Web</h3>
+          <p class="portfolio-desc">Pengembangan sistem manajemen untuk mendukung proses operasional bisnis.</p>
           <div class="portfolio-tools">
-            <span class="tool-tag">React</span>
-            <span class="tool-tag">Tailwind</span>
-            <span class="tool-tag">Figma</span>
+            <span class="tool-tag">Laravel</span>
+            <span class="tool-tag">Flutter</span>
+            <span class="tool-tag">Supabase</span>
           </div>
         </div>
       </div>
@@ -611,96 +488,47 @@
   </div>
 </section>
 
-<!-- ===== CERTIFICATES SECTION ===== -->
-<section id="certificates">
+<section id="certificates"> 
   <div class="container">
-
     <div class="section-title fade-in">
-      <h2 id="cert-title">Sertifikat & Penghargaan</h2>
+      <h2 id="cert-title">Organisasi & Prestasi</h2> 
       <div class="title-line"></div>
     </div>
-
     <div class="cert-grid" id="cert-grid">
 
       <div class="cert-card fade-in">
-        <div class="cert-icon" style="background:rgba(59,130,246,0.1)">
+        <div class="cert-icon" style="background:rgba(59,130,246,0.1)"> 
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
         </div>
-        <h3 class="cert-title">Google Digital Marketing</h3>
-        <p class="cert-issuer">Google</p>
-        <p class="cert-meta">Oktober 2023 · ID: GDM-2023-001</p>
-        <a href="#" class="cert-link">Lihat Sertifikat <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      </div>
-
-      <div class="cert-card fade-in">
-        <div class="cert-icon" style="background:rgba(59,130,246,0.1)">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <h3 class="cert-title">UI/UX Design Fundamentals</h3>
-        <p class="cert-issuer">Coursera</p>
-        <p class="cert-meta">Agustus 2023 · ID: CRS-2023-456</p>
-        <a href="#" class="cert-link">Lihat Sertifikat <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      </div>
-
-      <div class="cert-card fade-in">
-        <div class="cert-icon" style="background:rgba(59,130,246,0.1)">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <h3 class="cert-title">Juara 2 Lomba Desain Nasional</h3>
-        <p class="cert-issuer">Kemendikbud</p>
-        <p class="cert-meta">Mei 2023 · ID: KMD-2023-789</p>
-        <a href="#" class="cert-link">Lihat Sertifikat <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <h3 class="cert-title">Perwakilan Sekolah Kompetisi AutoCAD</h3> 
+        <p class="cert-issuer">Tingkat Kabupaten Bekasi</p> 
+        <p class="cert-meta">2019</p> 
       </div>
 
       <div class="cert-card fade-in">
         <div class="cert-icon" style="background:rgba(16,185,129,0.1)">
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <h3 class="cert-title">Content Marketing Specialist</h3>
-        <p class="cert-issuer">HubSpot Academy</p>
-        <p class="cert-meta">Maret 2023 · ID: HUB-2023-321</p>
-        <a href="#" class="cert-link">Lihat Sertifikat <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      </div>
-
-      <div class="cert-card fade-in">
-        <div class="cert-icon" style="background:rgba(245,158,11,0.1)">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#F59E0B" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </div>
-        <h3 class="cert-title">Adobe Certified Professional</h3>
-        <p class="cert-issuer">Adobe</p>
-        <p class="cert-meta">Januari 2023 · ID: ADB-2023-654</p>
-        <a href="#" class="cert-link">Lihat Sertifikat <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-      </div>
-
-      <div class="cert-card fade-in">
-        <div class="cert-icon" style="background:rgba(139,92,246,0.1)">
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#8B5CF6" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-        </div>
-        <h3 class="cert-title">Social Media Marketing</h3>
-        <p class="cert-issuer">Meta Blueprint</p>
-        <p class="cert-meta">November 2022 · ID: MET-2022-987</p>
-        <a href="#" class="cert-link">Lihat Sertifikat <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <h3 class="cert-title">Sekretaris OSIS (3 Periode)</h3> 
+        <p class="cert-issuer">SMK Negeri 1 Tambun Utara</p> 
+        <p class="cert-meta">2017 – 2020</p> 
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ===== CONTACT SECTION ===== -->
-<section id="contact">
+<section id="contact"> 
   <div class="container">
-
     <div class="section-title fade-in">
-      <h2 id="contact-title">Hubungi Saya</h2>
+      <h2 id="contact-title">Hubungi Saya</h2> 
       <div class="title-line"></div>
-      <p style="color:var(--muted-foreground);font-size:1rem;margin-top:16px" id="contact-sub">Mari berkolaborasi atau sekadar ngobrol!</p>
+      <p style="color:var(--muted-foreground);font-size:1rem;margin-top:16px" id="contact-sub">Siap berdiskusi untuk peluang kerja secara profesional.</p> 
     </div>
-
     <div class="contact-grid" id="contact-grid">
 
-      <!-- Left -->
       <div class="contact-left fade-in">
-        <h3 class="contact-title-local" id="contact-get-in-touch">Mari Terhubung</h3>
+        <h3 class="contact-title-local" id="contact-get-in-touch">Mari Terhubung</h3> 
 
         <a href="mailto:rifkiwahyuhartadi06@gmail.com" class="contact-info-card">
           <div class="contact-icon">
@@ -708,17 +536,17 @@
           </div>
           <div>
             <p class="contact-info-label">Email</p>
-            <p class="contact-info-value">rifkiwahyuhartadi06@gmail.com</p>
+            <p class="contact-info-value">rifkiwahyuhartadi06@gmail.com</p> 
           </div>
         </a>
 
-        <a href="https://wa.me/6281234567890" target="_blank" class="contact-info-card">
+        <a href="https://wa.me/6285710534903" target="_blank" class="contact-info-card">
           <div class="contact-icon" style="background:rgba(34,197,94,0.1);color:#22c55e">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </div>
           <div>
             <p class="contact-info-label">WhatsApp</p>
-            <p class="contact-info-value">+62 812-3456-7890</p>
+            <p class="contact-info-value">+62 857-1053-4903</p> 
           </div>
         </a>
 
@@ -728,39 +556,35 @@
           </div>
           <div>
             <p class="contact-info-label">Lokasi</p>
-            <p class="contact-info-value">Jakarta, Indonesia</p>
+            <p class="contact-info-value">Tambun Selatan, Bekasi</p> 
           </div>
         </div>
 
         <div class="contact-social-section">
-          <h4 class="contact-social-title" id="contact-connect">Temukan Saya Di</h4>
+          <h4 class="contact-social-title" id="contact-connect">Temukan Saya Di</h4> 
           <div class="contact-social-btns">
-            <a href="#" class="social-btn" title="LinkedIn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="#" class="social-btn" title="GitHub"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
-            <a href="#" class="social-btn" title="Instagram"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="#" class="social-btn" title="Twitter"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://linkedin.com/in/rifkiwahyuhartadi" target="_blank" class="social-btn" title="LinkedIn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
           </div>
         </div>
       </div>
 
-      <!-- Right - Form -->
       <div class="contact-right fade-in">
         <form id="contact-form">
           <div class="form-group">
-            <label class="form-label" id="label-name">Nama Lengkap</label>
-            <input type="text" class="form-input" placeholder="John Doe" required />
+            <label class="form-label" id="label-name">Nama Lengkap</label> 
+            <input type="text" class="form-input" placeholder="Nama Anda" required /> 
           </div>
           <div class="form-group">
-            <label class="form-label" id="label-email">Email</label>
-            <input type="email" class="form-input" placeholder="john@example.com" required />
+            <label class="form-label" id="label-email">Email</label> 
+            <input type="email" class="form-input" placeholder="email@example.com" required />
           </div>
           <div class="form-group">
-            <label class="form-label" id="label-subject">Subjek</label>
-            <input type="text" class="form-input" placeholder="Project Collaboration" required />
+            <label class="form-label" id="label-subject">Subjek</label> 
+            <input type="text" class="form-input" placeholder="Tawaran Pekerjaan" required />
           </div>
           <div class="form-group" style="margin-bottom:24px">
-            <label class="form-label" id="label-message">Pesan</label>
-            <textarea class="form-input" rows="5" placeholder="Ceritakan tentang project kamu..." required style="resize:none"></textarea>
+            <label class="form-label" id="label-message">Pesan</label> 
+            <textarea class="form-input" rows="5" placeholder="Tuliskan pesan Anda..." required style="resize:none"></textarea>
           </div>
           <button type="submit" class="btn-primary" style="width:100%;justify-content:center" id="submit-btn">
             Kirim Pesan
@@ -777,22 +601,20 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
-    <div class="footer-logo"><span>AS</span></div>
-    <p class="footer-tagline">Mahasiswa Aktif · Content Creator · Desainer Muda</p>
+    <div class="footer-logo"><span>RWH</span></div> 
+    <p class="footer-tagline">Operator Produksi · S1 Sistem Informasi</p> 
     <div class="footer-nav">
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('home')">Beranda</button>
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('about')">Tentang Saya</button>
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('portfolio')">Portofolio</button>
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('contact')">Kontak</button>
     </div>
-    <p class="footer-copy">© 2026 Rifki Wahyu Hartadi. All rights reserved.</p>
+    <p class="footer-copy">© 2026 Rifki Wahyu Hartadi. All rights reserved.</p> 
   </div>
 </footer>
 
-<!-- ===== FLOATING BUTTONS ===== -->
 <button id="whatsapp-btn" title="WhatsApp">
   <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </button>
@@ -803,20 +625,19 @@
   </svg>
 </button>
 
-<!-- ===== PORTFOLIO MODAL ===== -->
 <div id="modal">
   <div class="modal-content">
     <div class="modal-header">
-      <h3 class="modal-title" id="modal-title"></h3>
-      <button class="modal-close" onclick="closeModal()">
+      <h3 class="modal-title" id="modal-title"></h3> 
+      <button class="modal-close" onclick="closeModal()"> 
         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <img id="modal-img" class="modal-img" src="" alt="" />
-    <span id="modal-badge" class="badge" style="margin-bottom:12px;display:inline-block"></span>
-    <p id="modal-desc" class="modal-desc"></p>
+    <img id="modal-img" class="modal-img" src="" alt="" />       
+    <span id="modal-badge" class="badge" style="margin-bottom:12px;display:inline-block"></span> 
+    <p id="modal-desc" class="modal-desc"></p>                     
     <h4 class="modal-tools-label">Tools:</h4>
-    <div id="modal-tools"></div>
+    <div id="modal-tools"></div>                                  
     <a href="#" class="btn-primary" style="display:inline-flex;justify-content:center;width:100%" id="modal-link">
       Kunjungi Link
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -824,7 +645,6 @@
   </div>
 </div>
 
-<!-- ===== EXTERNAL JAVASCRIPT ===== -->
 <script src="script.js"></script>
 
 </body>
