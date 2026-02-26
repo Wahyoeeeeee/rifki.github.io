@@ -511,40 +511,30 @@ document.getElementById('scroll-top-btn').addEventListener('click', () => {
 });
 
 const form = document.getElementById("contact-form");
-const successMsg = document.getElementById("form-success");
-const submitBtn = document.getElementById("submit-btn");
 
-if (form) {
-  form.onsubmit = async (e) => {
-    e.preventDefault();
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  
+  // Ambil tombol untuk animasi loading singkat
+  const btn = document.querySelector(".btn-primary");
+  const originalText = btn.innerText;
+  btn.innerText = "Mengirim...";
+  btn.disabled = true;
+
+  // Sesuaikan ID dengan Dashboard EmailJS kamu
+  const serviceID = "service_z8sn3uw"; //
+  const templateID = "TEMPLATE_ID_KAMU"; 
+  const publicKey = "PUBLIC_KEY_KAMU"; 
+
+  try {
+    await emailjs.sendForm(serviceID, templateID, form, publicKey);
     
-    // Ubah teks tombol saat loading
-    submitBtn.innerText = "Mengirim...";
-    submitBtn.disabled = true;
-
-    const data = new FormData(form);
-    
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        successMsg.style.display = "block"; // Munculkan pesan sukses
-        form.reset(); // Kosongkan form
-        submitBtn.innerText = "Kirim Pesan";
-        submitBtn.disabled = false;
-      } else {
-        alert("Gagal mengirim. Pastikan internet aktif.");
-        submitBtn.innerText = "Kirim Pesan";
-        submitBtn.disabled = false;
-      }
-    } catch (error) {
-      alert("Terjadi kesalahan koneksi.");
-      submitBtn.innerText = "Kirim Pesan";
-      submitBtn.disabled = false;
-    }
-  };
-}
+    document.getElementById("form-success").style.display = "block";
+    form.reset();
+  } catch (error) {
+    alert("Waduh, gagal kirim: " + JSON.stringify(error));
+  } finally {
+    btn.innerText = originalText;
+    btn.disabled = false;
+  }
+};
