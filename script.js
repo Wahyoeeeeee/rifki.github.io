@@ -509,3 +509,42 @@ document.getElementById('whatsapp-btn').addEventListener('click', () => {
 document.getElementById('scroll-top-btn').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+const form = document.getElementById("contact-form");
+const successMsg = document.getElementById("form-success");
+const submitBtn = document.getElementById("submit-btn");
+
+if (form) {
+  form.onsubmit = async (e) => {
+    e.preventDefault();
+    
+    // Ubah teks tombol saat loading
+    submitBtn.innerText = "Mengirim...";
+    submitBtn.disabled = true;
+
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        successMsg.style.display = "block"; // Munculkan pesan sukses
+        form.reset(); // Kosongkan form
+        submitBtn.innerText = "Kirim Pesan";
+        submitBtn.disabled = false;
+      } else {
+        alert("Gagal mengirim. Pastikan internet aktif.");
+        submitBtn.innerText = "Kirim Pesan";
+        submitBtn.disabled = false;
+      }
+    } catch (error) {
+      alert("Terjadi kesalahan koneksi.");
+      submitBtn.innerText = "Kirim Pesan";
+      submitBtn.disabled = false;
+    }
+  };
+}

@@ -1478,3 +1478,15 @@ footer {
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+#form-success {
+  display: none; /* Sembunyikan dulu */
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+  font-weight: bold;
+}
