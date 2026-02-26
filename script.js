@@ -13,46 +13,46 @@
 // ===================================================
 const portfolioData = [
   {
-    title: 'Brand Identity - Kafe Modern',    // ✅ AMAN: Ganti judul
-    category: 'Desain',                        // ✅ AMAN: Ganti kategori (tampil di modal)
-    img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop', // ✅ AMAN: Ganti URL gambar
-    desc: 'Proyek ini mencakup pembuatan logo, color palette, typography system, dan guidelines branding untuk sebuah kafe modern. Desain menggabungkan estetika minimalis dengan sentuhan hangat yang mencerminkan karakter kafe.', // ✅ AMAN: Ganti deskripsi
-    tools: ['Adobe Illustrator', 'Figma', 'Photoshop'] // ✅ AMAN: Ganti/tambah/kurang tools
+    title: 'Publikasi Jurnal: Desain Mockup e-Learning SMK',
+    category: 'Desain, Jurnal',
+    img: 'https://ibb.co.com/1fzQNdgX',
+    desc: 'Co-author dalam riset perancangan UI/UX aplikasi e-learning untuk Sekolah Menengah Kejuruan menggunakan metode Design Thinking (Empathize, Define, Ideate, Prototype, Test). Hasil penelitian menunjukkan respons positif dari siswa dan guru SMK. Dipublikasikan di Indonesian Research Journal on Education (IRJE) Vol. 5 No. 5, 30 September 2025.',
+    tools: ['Figma']
   },
   {
-    title: 'Video Campaign - Produk Digital',
-    category: 'Video',
-    img: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop',
-    desc: 'Campaign video yang menampilkan fitur-fitur utama aplikasi mobile dengan storytelling yang engaging. Video ini berhasil mencapai 50K+ views dalam minggu pertama dan meningkatkan download 40%.',
-    tools: ['After Effects', 'Premiere Pro', 'Canva']
+    title: 'Program: Edukasi Toleransi Beragama',
+    category: 'Program, Edukasi',
+    img: 'https://assets.kompasiana.com/items/album/2025/06/27/whatsapp-image-2025-06-27-at-17-00-04-585463aa-685e6c67ed64152b975cb5a2.jpg',
+    desc: 'Memimpin tim 10 mahasiswa UBSI dalam program pengabdian masyarakat di Yayasan Panti Yatim Indonesia (PYI) Duta Harapan Bekasi, 2 Juni 2025. Program dirancang untuk menanamkan nilai toleransi beragama pada anak-anak asuh usia sekolah dasar melalui video edukasi, kuis interaktif, dan ice breaking. Seluruh target capaian berhasil dipenuhi.',
+    tools: ['Microsoft PowerPoint']
   },
   {
-    title: 'UI/UX Design - E-Commerce App',
-    category: 'Teknologi',
-    img: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop',
-    desc: 'Redesign complete untuk aplikasi e-commerce dengan fokus pada user experience yang seamless. Melakukan user research, wireframing, prototyping, dan usability testing.',
-    tools: ['Figma', 'Adobe XD', 'Miro']
+    title: 'Pengajar Tamu: Business Intelligence di SMA Mandalahayu',
+    category: 'Business Intelejen, PowerBI',
+    img: 'https://drive.google.com/file/d/19-ZQFEj50q2kkS92WXown4_UwjrIe5Ui/view?usp=sharing',
+    desc: 'Menyampaikan materi Business Intelligence secara langsung kepada siswa SMA Mandalahayu sebagai bagian dari project kelompok mata kuliah Business Intelligence di Universitas Bina Sarana Informatika (UBSI). Kegiatan ini merupakan pemenuhan nilai UTS dan UAS.',
+    tools: ['PowerBI']
   },
   {
-    title: 'Artikel - Panduan Digital Marketing',
-    category: 'Tulisan',
-    img: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=400&fit=crop',
-    desc: 'Series 10 artikel komprehensif yang membahas berbagai aspek digital marketing dari SEO, social media, hingga content strategy. Artikel mendapat 20K+ pembaca dan di-share 500+ kali.',
-    tools: ['Medium', 'Notion', 'Grammarly']
+    title: 'Implementasi Gambar Teknik ke AutoCAD',
+    category: 'AutoCAD',
+    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
+    desc: 'Pembuatan gambar teknik akurat dari dua sumber: (1) membaca dan mengimplementasikan sketsa gambar teknik yang diberikan ke AutoCAD, dan (2) mengukur dimensi objek secara mandiri menggunakan alat ukur presisi (Caliper & Mikrometer), menuangkan ke sketsa, lalu mengimplementasikannya ke AutoCAD. Diterapkan dalam kompetisi AutoCAD tingkat Kabupaten Bekasi dan kegiatan PKL.',
+    tools: ['AutoCAD']
   },
   {
-    title: 'Social Media Kit - Startup Tech',
-    category: 'Desain',
-    img: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop',
-    desc: 'Paket lengkap template untuk Instagram, LinkedIn, dan Twitter yang mencakup post, story, dan carousel. Desain modular yang mudah di-customize dengan branding startup.',
-    tools: ['Canva', 'Figma', 'Photoshop']
+    title: 'Quality Control: Zero Reject di Industri Manufaktur',
+    category: 'Quality Control',
+    img: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&h=400&fit=crop',
+    desc: 'Melakukan inspeksi visual ketat pada setiap komponen sebelum dikemas di PT Denko Wahana Industri, Cikarang. Menghasilkan tingkat reject 0% (Zero Reject) selama masa kerja dengan menerapkan standar K3 dan budaya 5R secara konsisten dalam lingkungan produksi bertekanan tinggi.',
+    tools: []
   },
   {
-    title: 'Landing Page - SaaS Product',
+    title: 'Manajemen Inventaris Ritel: Akurasi Stok 100%',
     category: 'Teknologi',
     img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    desc: 'Desain dan development landing page yang fokus pada konversi. Menggunakan React dan Tailwind CSS dengan animasi smooth dan loading time yang optimal. Conversion rate meningkat 35%.',
-    tools: ['React', 'Tailwind CSS', 'Figma']
+    desc: 'Pengelolaan stok dan operasional ritel di Rikita Mart menggunakan sistem FIFO selama 5+ tahun. Berhasil menjaga akurasi stok 100%, menekan pemborosan hingga zero waste, dan mengoptimalkan biaya operasional melalui pemilihan supplier yang kompetitif.',
+    tools: ['FIFO']
   }
 ];
 
