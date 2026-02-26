@@ -159,9 +159,10 @@ h1, h2, h3 {
 
 .loading-logo span {
   font-family: 'Syne', sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--primary-foreground);
+  letter-spacing: 1px;
 }
 
 .loading-bar-wrap {
@@ -233,9 +234,10 @@ h1, h2, h3 {
 
 .nav-logo-box span {
   font-family: 'Syne', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   font-weight: 800;
   color: var(--primary-foreground);
+  letter-spacing: 0.5px;
 }
 
 #desktop-nav {
