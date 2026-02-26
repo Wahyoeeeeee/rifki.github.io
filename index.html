@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rifki Wahyu Hartadi – CV & Portfolio</title>
-
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>" />
-
   <link rel="stylesheet" href="style.css" />
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
@@ -16,19 +13,21 @@
 
 <div id="scroll-progress"></div>
 
+<!-- LOADING SCREEN -->
 <div id="loading-screen">
   <div style="text-align:center">
-    <div class="loading-logo"><span>RWH</span></div> 
-    <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:8px">Rifki Wahyu Hartadi</h1> 
-    <p style="color:var(--muted-foreground);font-size:0.9rem">Memuat portfolio...</p> 
+    <div class="loading-logo"><span>RWH</span></div>
+    <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:8px">Rifki Wahyu Hartadi</h1>
+    <p style="color:var(--muted-foreground);font-size:0.9rem">Memuat portfolio...</p>
     <div class="loading-bar-wrap"><div class="loading-bar"></div></div>
   </div>
 </div>
 
+<!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-inner">
     <button class="nav-logo" onclick="scrollToSection('home')">
-      <div class="nav-logo-box"><span>RWH</span></div> 
+      <div class="nav-logo-box"><span>RWH</span></div>
     </button>
     <div id="desktop-nav">
       <button class="nav-link active" onclick="scrollToSection('home')" id="nav-home">Beranda</button>
@@ -58,6 +57,7 @@
   </div>
 </nav>
 
+<!-- MOBILE DRAWER -->
 <div id="mobile-drawer">
   <nav class="drawer-nav">
     <button class="nav-link" onclick="scrollToSection('home');toggleDrawer()">Beranda</button>
@@ -78,19 +78,18 @@
 </div>
 <div id="overlay" onclick="toggleDrawer()"></div>
 
-<section id="home"> 
+<!-- HERO SECTION -->
+<section id="home">
   <div class="hero-bg"></div>
   <div class="container">
     <div class="hero-grid" id="hero-grid">
       <div class="hero-left">
-
         <p class="hero-greeting fade-in" data-delay="0" id="hero-greeting">Halo, Saya</p>
         <h1 class="hero-name fade-in" data-delay="0.1">Rifki Wahyu Hartadi</h1>
-        <p class="hero-tagline fade-in" data-delay="0.2" id="hero-tagline">Profesional Operasional & Mahasiswa IT</p>
+        <p class="hero-tagline fade-in" data-delay="0.2" id="hero-tagline">Profesional Operasional · Mahasiswa S1 Sistem Informasi · Co-Author Jurnal Nasional</p>
         <p class="hero-desc fade-in" data-delay="0.3" id="hero-desc">
-          Memiliki kedisiplinan tinggi dari pengalaman manufaktur & logistik, dipadukan dengan pemahaman teknologi informasi (UI/UX & Web) dari bangku kuliah. Terbukti mampu beradaptasi, memimpin operasional, dan melakukan riset akademis.
+          Individu adaptif dengan rekam jejak nyata di industri manufaktur, F&amp;B, dan ritel. Memadukan disiplin operasional standar industri dengan wawasan teknologi informasi untuk menciptakan solusi yang efisien dan berdampak.
         </p>
-
         <div class="hero-cta fade-in" data-delay="0.4">
           <button class="btn-primary" onclick="scrollToSection('portfolio')" id="hero-cta1">
             Lihat Portofolio
@@ -105,7 +104,6 @@
             Unduh CV
           </a>
         </div>
-
         <div class="hero-socials fade-in" data-delay="0.5">
           <a href="https://linkedin.com/in/rifkiwahyuhartadi" target="_blank" class="social-btn" title="LinkedIn">
             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
@@ -115,7 +113,6 @@
           </a>
         </div>
       </div>
-
       <div class="hero-right fade-in" data-delay="0.3">
         <div class="profile-glow"></div>
         <div class="profile-wrap">
@@ -124,7 +121,7 @@
           </div>
           <div class="open-badge">
             <div class="pulse-dot"></div>
-            <span id="hero-badge">Tersedia Full-time</span> 
+            <span id="hero-badge">Tersedia Full-time</span>
           </div>
         </div>
       </div>
@@ -135,212 +132,283 @@
   </div>
 </section>
 
-<section id="about"> 
+<!-- ABOUT SECTION -->
+<section id="about">
   <div class="container">
     <div class="section-title fade-in">
-      <h2 id="about-title">Tentang Saya</h2> 
+      <h2 id="about-title">Tentang Saya</h2>
       <div class="title-line"></div>
     </div>
     <div class="about-grid" id="about-grid">
-
       <div class="about-img-wrap fade-in">
         <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=600&h=750&fit=crop" alt="About Rifki" />
       </div>
-
       <div class="about-right">
         <p class="about-bio fade-in" id="about-bio">
-          Saya adalah seorang profesional yang adaptif dengan pengalaman kerja lintas sektor—mulai dari teknis manufaktur, operasional F&B, hingga manajemen inventaris retail. Saat ini menempuh studi S1 Sistem Informasi, saya menggabungkan ketelitian operasional standar industri (5R & K3) dengan kemampuan analitis teknologi dan UI/UX untuk menciptakan solusi yang efisien.
+          Saya adalah profesional yang adaptif dengan pengalaman kerja lintas sektor — mulai dari teknis manufaktur, operasional F&amp;B, hingga manajemen inventaris ritel. Saat ini menempuh S1 Sistem Informasi di Universitas Bina Sarana Informatika, saya memadukan ketelitian operasional standar industri (5R &amp; K3) dengan kemampuan analitis teknologi dan UI/UX. Terbukti mampu memimpin program kemasyarakatan, berkontribusi dalam riset akademis yang dipublikasikan, dan mengajar langsung di lapangan.
         </p>
-
         <div class="info-list fade-in">
           <div class="info-row">
             <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div>
-              <p class="info-label" id="about-univ-label">Universitas</p> 
-              <p class="info-value" id="about-univ-val">Bina Sarana Informatika</p> 
+              <p class="info-label" id="about-univ-label">Universitas</p>
+              <p class="info-value" id="about-univ-val">Universitas Bina Sarana Informatika</p>
             </div>
           </div>
           <div class="info-row">
             <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
             <div>
-              <p class="info-label" id="about-major-label">Pendidikan</p> 
-              <p class="info-value" id="about-major-val">S1 Sistem Informasi | SMK Teknik Pemesinan</p> 
+              <p class="info-label" id="about-major-label">Pendidikan</p>
+              <p class="info-value" id="about-major-val">S1 Sistem Informasi · SMK Teknik Pemesinan</p>
             </div>
           </div>
           <div class="info-row">
             <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
             <div>
-              <p class="info-label" id="about-sem-label">Pencapaian Akademik</p> 
-              <p class="info-value" id="about-sem-val">IPK 3.23 | Co-Author Jurnal Nasional (IRJE)</p> 
+              <p class="info-label" id="about-sem-label">Pencapaian Akademik</p>
+              <p class="info-value" id="about-sem-val">IPK 3.23 · Co-Author Jurnal Nasional IRJE (2025)</p>
             </div>
           </div>
           <div class="info-row">
             <div class="info-icon"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div>
-              <p class="info-label" id="about-loc-label">Lokasi</p> 
-              <p class="info-value" id="about-loc-val">Tambun Selatan, Bekasi</p> 
+              <p class="info-label" id="about-loc-label">Lokasi</p>
+              <p class="info-value" id="about-loc-val">Tambun Selatan, Bekasi</p>
             </div>
           </div>
           <div class="info-row">
             <div class="info-icon" style="color:#22c55e"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
             <div>
-              <p class="info-label" id="about-status-label">Status</p> 
-              <p class="info-value" style="color:#22c55e" id="about-status-val">Siap Bekerja (Tersedia Penuh)</p> 
+              <p class="info-label" id="about-status-label">Status</p>
+              <p class="info-value" style="color:#22c55e" id="about-status-val">Tersedia Penuh — Siap Bekerja Segera</p>
             </div>
           </div>
         </div>
 
         <div class="skills-section fade-in">
-          <h3 id="about-softskills-title">Soft Skills</h3> 
+          <h3 id="about-softskills-title">Soft Skills</h3>
           <div class="soft-skills-wrap">
-            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Detail Oriented</span>
+            <span class="skill-tag">Disiplin</span>
             <span class="skill-tag">Adaptif</span>
             <span class="skill-tag">Manajemen Waktu</span>
-            <span class="skill-tag">Detail Oriented</span>
             <span class="skill-tag">Kerja Tim</span>
             <span class="skill-tag">Analitis</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Leadership</span>
           </div>
         </div>
 
         <div class="skills-section fade-in">
-          <h3 id="about-hardskills-title">Keahlian Utama</h3> 
+          <h3 id="about-hardskills-title">Keahlian Utama</h3>
           <div class="hard-skills-list">
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Manajemen Operasional & Inventaris (FIFO)</span>
+                <span class="skill-name">Manajemen Operasional &amp; Inventaris (FIFO)</span>
                 <span class="skill-pct">95%</span>
               </div>
               <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="95"></div></div>
             </div>
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Quality Control & Standar 5R/K3</span>
+                <span class="skill-name">Quality Control &amp; Standar 5R / K3</span>
                 <span class="skill-pct">90%</span>
               </div>
               <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="90"></div></div>
             </div>
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">UI/UX Design & Design Thinking</span>
+                <span class="skill-name">AutoCAD 2D/3D &amp; Gambar Teknik ISO</span>
                 <span class="skill-pct">85%</span>
               </div>
               <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="85"></div></div>
             </div>
             <div>
               <div class="skill-item-header">
-                <span class="skill-name">Pengolahan Data & Riset Akademis</span>
+                <span class="skill-name">UI/UX Design &amp; Design Thinking</span>
                 <span class="skill-pct">80%</span>
               </div>
               <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="80"></div></div>
             </div>
+            <div>
+              <div class="skill-item-header">
+                <span class="skill-name">Riset Akademis &amp; Pengolahan Data</span>
+                <span class="skill-pct">78%</span>
+              </div>
+              <div class="progress-bar-wrap"><div class="progress-bar-fill" data-width="78"></div></div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<section id="experience"> 
+<!-- EXPERIENCE SECTION -->
+<section id="experience">
   <div class="container">
     <div class="section-title fade-in">
-      <h2 id="exp-title">Pengalaman Kerja</h2> 
+      <h2 id="exp-title">Pengalaman Kerja</h2>
       <div class="title-line"></div>
     </div>
     <div class="timeline-wrap">
       <div class="timeline-line"></div>
       <div class="timeline-list">
 
+        <!-- KIRI: D'Fresto -->
         <div class="timeline-item fade-in">
           <div class="timeline-dot"></div>
-          <div class="timeline-card-wrap"> 
+          <div class="timeline-card-wrap">
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Pengelola Operasional & Inventaris</h3> 
-                  <p class="exp-org">Rikita Mart</p> 
+                  <h3 class="exp-role">Operator Produksi Kuliner</h3>
+                  <p class="exp-org">D'Fresto Franchise</p>
                 </div>
-                <span class="badge">Administrasi</span> 
+                <span class="badge">Operasional</span>
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  2020 – Sekarang 
+                  Jan 2026 – Sekarang
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Tambun Selatan, Bekasi 
+                  Tambun Selatan, Bekasi
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengelola akurasi pencatatan stok dan sirkulasi barang secara optimal menggunakan sistem FIFO.</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Memastikan ketersediaan barang dengan menekan angka pemborosan (zero waste).</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Melakukan efisiensi pengeluaran melalui negosiasi dan pemilihan supplier yang kompetitif.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengelola rantai produksi harian dari persiapan bahan baku hingga penyajian dengan hasil konsisten setiap harinya.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menerapkan standar kebersihan 5R secara ketat dan manajemen inventaris zero waste untuk efisiensi operasional.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div> 
+          <div class="timeline-spacer"></div>
         </div>
 
+        <!-- KANAN: Rikita Mart -->
         <div class="timeline-item right fade-in">
           <div class="timeline-dot"></div>
           <div class="timeline-card-wrap">
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Staf Produksi Kuliner</h3> 
-                  <p class="exp-org">D’Fresto Franchise</p> 
+                  <h3 class="exp-role">Pengelola Operasional &amp; Inventaris</h3>
+                  <p class="exp-org">Rikita Mart</p>
                 </div>
-                <span class="badge">Operasional</span> 
+                <span class="badge">Administrasi</span>
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Jan 2026 – Sekarang 
+                  2020 – Sekarang
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Tambun Selatan, Bekasi 
+                  Tambun Selatan, Bekasi
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengendalikan seluruh rantai operasional harian, dari logistik bahan baku hingga penyajian ke konsumen.</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menjamin standar kebersihan operasional (5R) yang berdampak langsung pada kualitas layanan.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menjaga akurasi stok 100% dengan sistem FIFO dan memastikan ketersediaan barang tanpa pemborosan (zero waste).</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mengoptimalkan biaya operasional melalui pemilihan supplier kompetitif sehingga meningkatkan margin keuntungan usaha.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div> 
+          <div class="timeline-spacer"></div>
         </div>
 
+        <!-- KIRI: Literasi Coffee -->
         <div class="timeline-item fade-in">
           <div class="timeline-dot"></div>
           <div class="timeline-card-wrap">
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Operator & Quality Control</h3> 
-                  <p class="exp-org">PT Denko Wahana Industri</p> 
+                  <h3 class="exp-role">Part Time Barista</h3>
+                  <p class="exp-org">Literasi Coffee</p>
                 </div>
-                <span class="badge">Manufaktur</span> 
+                <span class="badge">Part-time</span>
               </div>
               <div class="exp-meta">
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  Okt 2022 – Des 2022 
+                  Jun 2025 – Des 2025
                 </span>
                 <span class="exp-meta-item">
                   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Cikarang, Bekasi 
+                  Tambun Selatan, Bekasi
                 </span>
               </div>
               <ul class="exp-resp-list">
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mencapai 100% akurasi dalam pemrosesan data pengemasan sesuai target harian departemen.</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Melakukan inspeksi kelayakan produk yang menghasilkan performa Zero Reject (0% cacat).</span></li>
-                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Terbiasa bekerja dalam lingkungan dengan tekanan tinggi dan regulasi K3 yang ketat.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menjalankan operasional harian sesuai SOP perusahaan untuk menjaga kualitas dan kepuasan pelanggan.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Pencatatan stok bahan baku dengan akurasi tinggi dan penerapan standar 5R untuk kelancaran alur kerja.</span></li>
               </ul>
             </div>
           </div>
-          <div class="timeline-spacer"></div> 
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <!-- KANAN: PT Denko -->
+        <div class="timeline-item right fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card-wrap">
+            <div class="exp-card">
+              <div class="exp-card-header">
+                <div>
+                  <h3 class="exp-role">Operator Packing &amp; Quality Control</h3>
+                  <p class="exp-org">PT Denko Wahana Industri</p>
+                </div>
+                <span class="badge">Manufaktur</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-meta-item">
+                  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Okt 2022 – Des 2022
+                </span>
+                <span class="exp-meta-item">
+                  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Cikarang, Bekasi
+                </span>
+              </div>
+              <ul class="exp-resp-list">
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Mencapai 100% akurasi pemrosesan data pengemasan sesuai target harian departemen produksi.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Melakukan inspeksi visual ketat setiap komponen, menghasilkan Zero Reject (0% cacat) selama masa kerja.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Menerapkan budaya 5R dan regulasi K3 secara konsisten dalam lingkungan kerja tekanan tinggi.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <!-- KIRI: PT Trimitra PKL -->
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card-wrap">
+            <div class="exp-card">
+              <div class="exp-card-header">
+                <div>
+                  <h3 class="exp-role">Junior Maintenance (PKL)</h3>
+                  <p class="exp-org">PT Trimitra Chitrahasta</p>
+                </div>
+                <span class="badge">Magang</span>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-meta-item">
+                  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Jan 2019 – Apr 2019
+                </span>
+                <span class="exp-meta-item">
+                  <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Cikarang, Bekasi
+                </span>
+              </div>
+              <ul class="exp-resp-list">
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Melakukan perbaikan dan inspeksi spare part mesin produksi sesuai standar gambar teknik dan toleransi perusahaan.</span></li>
+                <li class="exp-resp-item"><span class="exp-bullet"></span><span class="exp-resp-text">Pemeliharaan alat ukur presisi secara rutin dan penerapan budaya 5R di lingkungan industri otomotif.</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-spacer"></div>
         </div>
 
       </div>
@@ -348,27 +416,31 @@
   </div>
 </section>
 
-<section id="portfolio"> 
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio">
   <div class="container">
     <div class="section-title fade-in">
-      <h2 id="port-title">Portofolio Kompetensi</h2> 
+      <h2 id="port-title">Portofolio Kompetensi</h2>
       <div class="title-line"></div>
     </div>
-
     <div class="filter-wrap fade-in">
       <button class="filter-btn active" onclick="filterPortfolio('all')"     data-filter="all"     id="filter-all">Semua</button>
-      <button class="filter-btn"        onclick="filterPortfolio('tech')"    data-filter="tech"    id="filter-tech">Sistem Informasi & Jurnal</button>
+      <button class="filter-btn"        onclick="filterPortfolio('tech')"    data-filter="tech"    id="filter-tech">Riset &amp; TI</button>
       <button class="filter-btn"        onclick="filterPortfolio('design')"  data-filter="design"  id="filter-design">Teknik Mesin</button>
       <button class="filter-btn"        onclick="filterPortfolio('video')"   data-filter="video"   id="filter-video">AutoCAD</button>
-      <button class="filter-btn"        onclick="filterPortfolio('writing')" data-filter="writing" id="filter-writing">Manajemen Inventaris</button>
+      <button class="filter-btn"        onclick="filterPortfolio('writing')" data-filter="writing" id="filter-writing">Operasional</button>
     </div>
 
     <div class="portfolio-grid" id="portfolio-grid">
 
+      <!-- INDEX 0: Jurnal IRJE -->
       <div class="portfolio-card fade-in" data-category="tech">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Jurnal UI/UX" />
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Jurnal IRJE" />
           <div class="portfolio-overlay">
+            <button class="icon-btn" onclick="openModal(0)" title="Lihat Detail">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
             <a href="https://garuda.kemdiktisaintek.go.id/documents/detail/5530612" target="_blank" class="icon-btn" title="Baca Jurnal">
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
@@ -376,95 +448,125 @@
         </div>
         <div class="portfolio-body">
           <span class="badge portfolio-category">Riset Akademik</span>
-          <h3 class="portfolio-title">Publikasi Jurnal: Desain Mockup e-Learning</h3>
-          <p class="portfolio-desc">Riset perancangan UI/UX menggunakan Design Thinking. Dipublikasikan di IRJE Vol. 5, 2025.</p>
+          <h3 class="portfolio-title">Publikasi Jurnal: Desain Mockup e-Learning SMK</h3>
+          <p class="portfolio-desc">Co-author riset UI/UX menggunakan metode Design Thinking. Dipublikasikan di IRJE Vol. 5 No. 5, Sep 2025.</p>
           <div class="portfolio-tools">
             <span class="tool-tag">UI/UX</span>
-            <span class="tool-tag">Riset</span>
             <span class="tool-tag">Design Thinking</span>
+            <span class="tool-tag">IRJE 2025</span>
           </div>
         </div>
       </div>
 
-      <div class="portfolio-card fade-in" data-category="video"> 
+      <!-- INDEX 1: Pengabdian Masyarakat -->
+      <div class="portfolio-card fade-in" data-category="tech">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" alt="AutoCAD 2D/3D" />
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=400&fit=crop" alt="Pengabdian Masyarakat" />
           <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(0)" title="Lihat Detail"> 
+            <button class="icon-btn" onclick="openModal(1)" title="Lihat Detail">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+            <a href="https://www.kompasiana.com/reynataanggraenyasysyams5738/685e6cf8ed641531846b9fe2/edukasi-toleransi-bersama-yayasan-pyi-duta-harapan-bekasi" target="_blank" class="icon-btn" title="Baca Artikel">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="badge portfolio-category">Pengabdian Masyarakat</span>
+          <h3 class="portfolio-title">Ketua Program: Edukasi Toleransi Beragama</h3>
+          <p class="portfolio-desc">Memimpin tim 10 mahasiswa UBSI dalam pengabdian masyarakat di Yayasan PYI Duta Harapan Bekasi, 2 Juni 2025. Berhasil meningkatkan pemahaman toleransi anak asuh melalui video edukasi dan kuis interaktif.</p>
+          <div class="portfolio-tools">
+            <span class="tool-tag">Leadership</span>
+            <span class="tool-tag">Program Design</span>
+            <span class="tool-tag">Komunikasi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDEX 2: Mengajar Business Intelligence -->
+      <div class="portfolio-card fade-in" data-category="tech">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&h=400&fit=crop" alt="Business Intelligence" />
+          <div class="portfolio-overlay">
+            <button class="icon-btn" onclick="openModal(2)" title="Lihat Detail">
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
           </div>
         </div>
         <div class="portfolio-body">
-          <span class="badge portfolio-category">AutoCAD</span> 
-          <h3 class="portfolio-title">Implementasi Sketsa ke AutoCAD</h3> 
-          <p class="portfolio-desc">Pembuatan gambar teknik akurat untuk mesin produksi.</p> 
+          <span class="badge portfolio-category">Pengajaran</span>
+          <h3 class="portfolio-title">Pengajar Tamu: Business Intelligence di SMA Mandalahayu</h3>
+          <p class="portfolio-desc">Menyampaikan materi Business Intelligence kepada siswa SMA Mandalahayu sebagai project kelompok mata kuliah Business Intelligence UBSI (pemenuhan nilai UTS &amp; UAS).</p>
           <div class="portfolio-tools">
-            <span class="tool-tag">AutoCAD 2D/3D</span> 
+            <span class="tool-tag">Business Intelligence</span>
+            <span class="tool-tag">Public Speaking</span>
+            <span class="tool-tag">UBSI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- INDEX 3: AutoCAD -->
+      <div class="portfolio-card fade-in" data-category="video">
+        <div class="portfolio-img-wrap">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" alt="AutoCAD" />
+          <div class="portfolio-overlay">
+            <button class="icon-btn" onclick="openModal(3)" title="Lihat Detail">
+              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="badge portfolio-category">AutoCAD</span>
+          <h3 class="portfolio-title">Implementasi Gambar Teknik ke AutoCAD</h3>
+          <p class="portfolio-desc">Pembuatan gambar teknik akurat dari sketsa fisik maupun pengukuran langsung menggunakan alat ukur presisi, untuk keperluan produksi dan kompetisi tingkat kabupaten.</p>
+          <div class="portfolio-tools">
+            <span class="tool-tag">AutoCAD 2D/3D</span>
             <span class="tool-tag">Gambar Teknik ISO</span>
           </div>
         </div>
       </div>
 
+      <!-- INDEX 4: QC Manufaktur -->
       <div class="portfolio-card fade-in" data-category="design">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&h=400&fit=crop" alt="Alat Ukur Presisi" />
+          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&h=400&fit=crop" alt="Quality Control" />
           <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(1)"> 
+            <button class="icon-btn" onclick="openModal(4)" title="Lihat Detail">
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
           </div>
         </div>
         <div class="portfolio-body">
           <span class="badge portfolio-category">Teknik Mesin</span>
-          <h3 class="portfolio-title">Pengukuran Presisi Zero Reject</h3> 
-          <p class="portfolio-desc">Inspeksi visual ketat menggunakan Caliper dan Mikrometer.</p>
+          <h3 class="portfolio-title">Quality Control: Zero Reject di Industri Manufaktur</h3>
+          <p class="portfolio-desc">Inspeksi visual dan pengukuran dimensi komponen menggunakan Caliper &amp; Mikrometer, menghasilkan tingkat reject 0% selama masa kerja di PT Denko Wahana Industri, Cikarang.</p>
           <div class="portfolio-tools">
             <span class="tool-tag">Caliper</span>
             <span class="tool-tag">Mikrometer</span>
-            <span class="tool-tag">Standar QC</span>
+            <span class="tool-tag">QC</span>
+            <span class="tool-tag">K3</span>
           </div>
         </div>
       </div>
 
+      <!-- INDEX 5: Inventaris -->
       <div class="portfolio-card fade-in" data-category="writing">
         <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?w=600&h=400&fit=crop" alt="Manajemen Inventaris" />
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Manajemen Inventaris" />
           <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(2)"> 
+            <button class="icon-btn" onclick="openModal(5)" title="Lihat Detail">
               <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             </button>
           </div>
         </div>
         <div class="portfolio-body">
-          <span class="badge portfolio-category">Manajemen Inventaris</span>
-          <h3 class="portfolio-title">Optimalisasi Stok FIFO</h3>
-          <p class="portfolio-desc">Penerapan manajemen barang masuk keluar secara efisien.</p>
+          <span class="badge portfolio-category">Operasional</span>
+          <h3 class="portfolio-title">Manajemen Inventaris Ritel: Akurasi Stok 100%</h3>
+          <p class="portfolio-desc">Pengelolaan stok dan operasional ritel menggunakan sistem FIFO selama 5+ tahun, mencapai akurasi stok 100% dan zero waste secara konsisten di Rikita Mart.</p>
           <div class="portfolio-tools">
-            <span class="tool-tag">Sistem FIFO</span>
-            <span class="tool-tag">Ms. Excel</span>
+            <span class="tool-tag">FIFO</span>
             <span class="tool-tag">Zero Waste</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-card fade-in" data-category="tech">
-        <div class="portfolio-img-wrap">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Sistem Informasi" />
-          <div class="portfolio-overlay">
-            <button class="icon-btn" onclick="openModal(3)"> 
-              <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </button>
-          </div>
-        </div>
-        <div class="portfolio-body">
-          <span class="badge portfolio-category">Sistem Informasi</span>
-          <h3 class="portfolio-title">Proyek Pengembangan Web App</h3>
-          <p class="portfolio-desc">Pengembangan sistem manajemen untuk mendukung proses operasional bisnis.</p>
-          <div class="portfolio-tools">
-            <span class="tool-tag">Laravel</span>
-            <span class="tool-tag">Flutter</span>
-            <span class="tool-tag">Supabase</span>
+            <span class="tool-tag">Manajemen Stok</span>
           </div>
         </div>
       </div>
@@ -473,56 +575,84 @@
   </div>
 </section>
 
-<section id="certificates"> 
+<!-- ORGANISASI & PENCAPAIAN -->
+<section id="certificates">
   <div class="container">
     <div class="section-title fade-in">
-      <h2 id="cert-title">Organisasi & Pencapaian</h2> 
+      <h2 id="cert-title">Organisasi &amp; Pencapaian</h2>
       <div class="title-line"></div>
     </div>
     <div class="cert-grid" id="cert-grid">
 
       <div class="cert-card fade-in">
-        <div class="cert-icon" style="background:rgba(59,130,246,0.1)"> 
+        <div class="cert-icon" style="background:rgba(59,130,246,0.1)">
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="var(--accent)" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
         </div>
-        <h3 class="cert-title">Co-Author Jurnal Nasional (IRJE)</h3> 
-        <p class="cert-issuer">Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi</p> 
-        <p class="cert-meta">2025</p> 
+        <h3 class="cert-title">Co-Author Jurnal Nasional (IRJE)</h3>
+        <p class="cert-issuer">Indonesian Research Journal on Education — Universitas Pahlawan Tuanku Tambusai</p>
+        <p class="cert-meta">30 Sep 2025 · Vol. 5 No. 5</p>
+        <a href="https://garuda.kemdiktisaintek.go.id/documents/detail/5530612" target="_blank" class="cert-link">
+          Baca di Garuda Kemendikti
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon" style="background:rgba(139,92,246,0.1)">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#8B5CF6" stroke-width="1.5"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <h3 class="cert-title">Ketua Tim — Pengabdian Masyarakat UBSI</h3>
+        <p class="cert-issuer">Yayasan PYI Duta Harapan Bekasi · Edukasi Toleransi Beragama</p>
+        <p class="cert-meta">2 Juni 2025 · Tim 10 Mahasiswa</p>
+        <a href="https://www.kompasiana.com/reynataanggraenyasysyams5738/685e6cf8ed641531846b9fe2/edukasi-toleransi-bersama-yayasan-pyi-duta-harapan-bekasi" target="_blank" class="cert-link">
+          Baca di Kompasiana
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
       </div>
 
       <div class="cert-card fade-in">
         <div class="cert-icon" style="background:rgba(16,185,129,0.1)">
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <h3 class="cert-title">Sekretaris OSIS (3 Periode)</h3> 
-        <p class="cert-issuer">SMK Negeri 1 Tambun Utara</p> 
-        <p class="cert-meta">2017 – 2020</p> 
+        <h3 class="cert-title">Pengajar Tamu — Business Intelligence</h3>
+        <p class="cert-issuer">SMA Mandalahayu · Project Matakuliah Business Intelligence UBSI</p>
+        <p class="cert-meta">2024/2025 · Pemenuhan Nilai UTS &amp; UAS</p>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon" style="background:rgba(16,185,129,0.1)">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3 class="cert-title">Sekretaris OSIS (3 Periode Berturut-turut)</h3>
+        <p class="cert-issuer">SMK Negeri 1 Tambun Utara</p>
+        <p class="cert-meta">2017 – 2020 · Mengelola 50+ dokumen administratif per tahun</p>
       </div>
 
       <div class="cert-card fade-in">
         <div class="cert-icon" style="background:rgba(245,158,11,0.1)">
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#F59E0B" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <h3 class="cert-title">Perwakilan Kompetisi Sekolah</h3> 
-        <p class="cert-issuer">Kompetisi AutoCAD Tingkat Kabupaten</p> 
-        <p class="cert-meta">2019</p> 
+        <h3 class="cert-title">Perwakilan Sekolah — Kompetisi AutoCAD</h3>
+        <p class="cert-issuer">Tingkat Kabupaten Bekasi</p>
+        <p class="cert-meta">2019 · Implementasi sketsa &amp; pengukuran presisi ke AutoCAD 2 tahap</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<section id="contact"> 
+<!-- CONTACT SECTION -->
+<section id="contact">
   <div class="container">
     <div class="section-title fade-in">
-      <h2 id="contact-title">Hubungi Saya</h2> 
+      <h2 id="contact-title">Hubungi Saya</h2>
       <div class="title-line"></div>
-      <p style="color:var(--muted-foreground);font-size:1rem;margin-top:16px" id="contact-sub">Siap berdiskusi untuk peluang kerja secara profesional.</p> 
+      <p style="color:var(--muted-foreground);font-size:1rem;margin-top:16px" id="contact-sub">Siap berdiskusi untuk peluang kerja atau kolaborasi profesional.</p>
     </div>
     <div class="contact-grid" id="contact-grid">
 
       <div class="contact-left fade-in">
-        <h3 class="contact-title-local" id="contact-get-in-touch">Mari Terhubung</h3> 
+        <h3 class="contact-title-local" id="contact-get-in-touch">Mari Terhubung</h3>
 
         <a href="mailto:rifkiwahyuhartadi06@gmail.com" class="contact-info-card">
           <div class="contact-icon">
@@ -530,80 +660,92 @@
           </div>
           <div>
             <p class="contact-info-label">Email</p>
-            <p class="contact-info-value">rifkiwahyuhartadi06@gmail.com</p> 
+            <p class="contact-info-value">rifkiwahyuhartadi06@gmail.com</p>
           </div>
         </a>
 
         <a href="https://wa.me/6285710534903" target="_blank" class="contact-info-card">
           <div class="contact-icon" style="background:rgba(34,197,94,0.1);color:#22c55e">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</button>
+          </div>
+          <div>
+            <p class="contact-info-label">WhatsApp</p>
+            <p class="contact-info-value">+62 857-1053-4903</p>
+          </div>
+        </a>
 
-<div class="contact-info-card" style="cursor:default">
-  <div class="contact-icon">
-    <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-  </div>
-  <div>
-    <p class="contact-info-label">Lokasi</p>
-    <p class="contact-info-value">Tambun Selatan, Bekasi</p> 
-  </div>
-</div>
+        <div class="contact-info-card" style="cursor:default">
+          <div class="contact-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="contact-info-label">Lokasi</p>
+            <p class="contact-info-value">Tambun Selatan, Bekasi</p>
+          </div>
+        </div>
 
-<div class="contact-social-section">
-  <h4 class="contact-social-title" id="contact-connect">Temukan Saya Di</h4> 
-  <div class="contact-social-btns">
-    <a href="https://linkedin.com/in/rifkiwahyuhartadi" target="_blank" class="social-btn" title="LinkedIn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-  </div>
-</div>
-</div>
+        <div class="contact-social-section">
+          <h4 class="contact-social-title" id="contact-connect">Temukan Saya Di</h4>
+          <div class="contact-social-btns">
+            <a href="https://linkedin.com/in/rifkiwahyuhartadi" target="_blank" class="social-btn" title="LinkedIn">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:rifkiwahyuhartadi06@gmail.com" class="social-btn" title="Email">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
 
-<div class="contact-right fade-in">
-<form id="contact-form">
-  <div class="form-group">
-    <label class="form-label" id="label-name">Nama Lengkap</label> 
-    <input type="text" class="form-input" placeholder="Nama Anda" required /> 
-  </div>
-  <div class="form-group">
-    <label class="form-label" id="label-email">Email</label> 
-    <input type="email" class="form-input" placeholder="email@example.com" required />
-  </div>
-  <div class="form-group">
-    <label class="form-label" id="label-subject">Subjek</label> 
-    <input type="text" class="form-input" placeholder="Tawaran Pekerjaan" required />
-  </div>
-  <div class="form-group" style="margin-bottom:24px">
-    <label class="form-label" id="label-message">Pesan</label> 
-    <textarea class="form-input" rows="5" placeholder="Tuliskan pesan Anda..." required style="resize:none"></textarea>
-  </div>
-  <button type="submit" class="btn-primary" style="width:100%;justify-content:center" id="submit-btn">
-    Kirim Pesan
-    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-      <line x1="22" y1="2" x2="11" y2="13"/>
-      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-    </svg>
-  </button>
-  <div id="form-success" class="form-success">✓ Pesan berhasil dikirim! Saya akan segera menghubungi kamu.</div>
-</form>
-</div>
+      <div class="contact-right fade-in">
+        <form id="contact-form">
+          <div class="form-group">
+            <label class="form-label" id="label-name">Nama Lengkap</label>
+            <input type="text" class="form-input" placeholder="Nama Anda" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="label-email">Email</label>
+            <input type="email" class="form-input" placeholder="email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="label-subject">Subjek</label>
+            <input type="text" class="form-input" placeholder="Tawaran Pekerjaan / Kolaborasi" required />
+          </div>
+          <div class="form-group" style="margin-bottom:24px">
+            <label class="form-label" id="label-message">Pesan</label>
+            <textarea class="form-input" rows="5" placeholder="Tuliskan pesan Anda..." required style="resize:none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center" id="submit-btn">
+            Kirim Pesan
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+          <div id="form-success" class="form-success">&#10003; Pesan berhasil dikirim! Saya akan segera menghubungi kamu.</div>
+        </form>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-logo"><span>RWH</span></div> 
-    <p class="footer-tagline">Operator Produksi · S1 Sistem Informasi</p> 
+    <div class="footer-logo"><span>RWH</span></div>
+    <p class="footer-tagline">Profesional Operasional · Mahasiswa S1 Sistem Informasi · Co-Author Jurnal Nasional</p>
     <div class="footer-nav">
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('home')">Beranda</button>
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('about')">Tentang Saya</button>
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('portfolio')">Portofolio</button>
       <button class="nav-link" style="font-size:0.85rem" onclick="scrollToSection('contact')">Kontak</button>
     </div>
-    <p class="footer-copy">© 2026 Rifki Wahyu Hartadi. All rights reserved.</p> 
+    <p class="footer-copy">&#169; 2026 Rifki Wahyu Hartadi. All rights reserved.</p>
   </div>
 </footer>
 
+<!-- FLOATING BUTTONS -->
 <button id="whatsapp-btn" title="WhatsApp">
   <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </button>
@@ -614,19 +756,20 @@
   </svg>
 </button>
 
+<!-- MODAL -->
 <div id="modal">
   <div class="modal-content">
     <div class="modal-header">
-      <h3 class="modal-title" id="modal-title"></h3> 
-      <button class="modal-close" onclick="closeModal()"> 
+      <h3 class="modal-title" id="modal-title"></h3>
+      <button class="modal-close" onclick="closeModal()">
         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
-    <img id="modal-img" class="modal-img" src="" alt="" />       
-    <span id="modal-badge" class="badge" style="margin-bottom:12px;display:inline-block"></span> 
-    <p id="modal-desc" class="modal-desc"></p>                     
+    <img id="modal-img" class="modal-img" src="" alt="" />
+    <span id="modal-badge" class="badge" style="margin-bottom:12px;display:inline-block"></span>
+    <p id="modal-desc" class="modal-desc"></p>
     <h4 class="modal-tools-label">Tools:</h4>
-    <div id="modal-tools"></div>                                  
+    <div id="modal-tools"></div>
     <a href="#" class="btn-primary" style="display:inline-flex;justify-content:center;width:100%" id="modal-link">
       Kunjungi Link
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
@@ -635,6 +778,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
