@@ -15,7 +15,7 @@ const portfolioData = [
   {
     title: 'Publikasi Jurnal: Desain Mockup e-Learning SMK',
     category: 'Desain, Jurnal',
-    img: 'https://ibb.co.com/1fzQNdgX',
+    img: 'https://i.ibb.co.com/99Zg0VD4/Screenshot-2026-02-27-031203.png',
     desc: 'Co-author dalam riset perancangan UI/UX aplikasi e-learning untuk Sekolah Menengah Kejuruan menggunakan metode Design Thinking (Empathize, Define, Ideate, Prototype, Test). Hasil penelitian menunjukkan respons positif dari siswa dan guru SMK. Dipublikasikan di Indonesian Research Journal on Education (IRJE) Vol. 5 No. 5, 30 September 2025.',
     tools: ['Figma']
   },
@@ -29,7 +29,7 @@ const portfolioData = [
   {
     title: 'Pengajar Tamu: Business Intelligence di SMA Mandalahayu',
     category: 'Business Intelejen, PowerBI',
-    img: 'https://drive.google.com/file/d/19-ZQFEj50q2kkS92WXown4_UwjrIe5Ui/view?usp=sharing',
+    img: 'https://i.ibb.co.com/vx5NCdFx/foto.jpg',
     desc: 'Menyampaikan materi Business Intelligence secara langsung kepada siswa SMA Mandalahayu sebagai bagian dari project kelompok mata kuliah Business Intelligence di Universitas Bina Sarana Informatika (UBSI). Kegiatan ini merupakan pemenuhan nilai UTS dan UAS.',
     tools: ['PowerBI']
   },
